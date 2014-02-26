@@ -17,8 +17,8 @@ class citfact_empty extends CModule {
      */
     public function citfact_empty() {
 		include($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/{$this->MODULE_ID}/install/version.php");
-        $this->MODULE_NAME       	= GetMessage( 'CITFACT_FILTRUSPROP_NAME' );
-        $this->MODULE_DESCRIPTION	= GetMessage( 'CITFACT_FILTRUSPROP_DESC' );
+        $this->MODULE_NAME       	= GetMessage( 'CITFACT_EMPTY_MODULNAME' );
+        $this->MODULE_DESCRIPTION	= GetMessage( 'CITFACT_EMPTY_DESC' );
         $this->MODULE_VERSION		= $arModuleVersion['VERSION'];
         $this->MODULE_VERSION_DATE	= $arModuleVersion['VERSION_DATE'];
 		$this->PARTNER_NAME			= GetMessage("CITFACT_OPTIONS_PARTNER_NAME");

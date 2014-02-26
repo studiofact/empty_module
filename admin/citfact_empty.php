@@ -14,8 +14,8 @@ CJSCore::Init(array("jquery"));?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php");
 
 $aTabs = array(
-	array("DIV" => "edit1", "TAB" => GetMessage("FACT_CREATE_PROP_HELP_LIST"), "TITLE" => "Заголовок таба 1"),
-	array("DIV" => "edit2", "TAB" => GetMessage("FACT_CREATE_PROP_HELP_LIST"), "TITLE" => "Заголовок таба 2")
+	array("DIV" => "edit1", "TAB" => GetMessage("FACT_TAB1_HEADER"), "TITLE" => GetMessage("FACT_TAB1_HEADER")),
+	array("DIV" => "edit2", "TAB" => GetMessage("FACT_TAB2_HEADER"), "TITLE" => GetMessage("FACT_TAB2_HEADER"))
 );
 $tabControl = new CAdminTabControl("tabControl", $aTabs);
 ?>
@@ -34,7 +34,7 @@ $tabControl->Begin();
 <tr><td>тело второго таба </td></tr>
 
 <?$tabControl->Buttons();?>
-<input  class="adm-btn" type="submit" name="Update" value="<?=GetMessage("FACT_CREATE_PROP_HELP_SAVE"); ?>" title="<?=GetMessage("FACT_CREATE_PROP_HELP_SAVE"); ?>">
+<input  class="adm-btn" type="submit" name="Update" value="<?=GetMessage("FACT_SAVE"); ?>" title="<?=GetMessage("FACT_SAVE"); ?>">
 <?$tabControl->End();?>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_admin.php");?>
