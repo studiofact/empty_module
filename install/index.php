@@ -15,7 +15,7 @@ class citfact_empty extends CModule {
     /**
      * Инициализация модуля для страницы "Управление модулями"
      */
-    public function citfact_empty() {
+    function __construct() {
 		include($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/{$this->MODULE_ID}/install/version.php");
         $this->MODULE_NAME       	= GetMessage( 'CITFACT_EMPTY_MODULNAME' );
         $this->MODULE_DESCRIPTION	= GetMessage( 'CITFACT_EMPTY_DESC' );
