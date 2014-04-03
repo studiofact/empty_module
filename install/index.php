@@ -17,10 +17,10 @@ class citfact_empty extends CModule {
 	*/
 	function __construct() {
 		include($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/{$this->MODULE_ID}/install/version.php");
-	$this->MODULE_NAME       	= GetMessage( 'CITFACT_EMPTY_MODULNAME' );
-	$this->MODULE_DESCRIPTION	= GetMessage( 'CITFACT_EMPTY_DESC' );
-	$this->MODULE_VERSION		= $arModuleVersion['VERSION'];
-	$this->MODULE_VERSION_DATE	= $arModuleVersion['VERSION_DATE'];
+		$this->MODULE_NAME       	= GetMessage( 'CITFACT_EMPTY_MODULNAME' );
+		$this->MODULE_DESCRIPTION	= GetMessage( 'CITFACT_EMPTY_DESC' );
+		$this->MODULE_VERSION		= $arModuleVersion['VERSION'];
+		$this->MODULE_VERSION_DATE	= $arModuleVersion['VERSION_DATE'];
 		$this->PARTNER_NAME			= GetMessage("CITFACT_OPTIONS_PARTNER_NAME");
 		$this->PARTNER_URI			= GetMessage("CITFACT_OPTIONS_PARTNER_URI");
 	}
@@ -35,11 +35,11 @@ class citfact_empty extends CModule {
 	//      return;
 	//  }
 	
-	if(!$this->InstallDB()) {
-	      return;
-	}
-	CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/{$this->MODULE_ID}/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin", true, true);
-	RegisterModule( $this->MODULE_ID );
+		if(!$this->InstallDB()) {
+		      return;
+		}
+		CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/{$this->MODULE_ID}/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin", true, true);
+		RegisterModule( $this->MODULE_ID );
 	}
 	
 	/**
@@ -50,12 +50,12 @@ class citfact_empty extends CModule {
 	//        return;
 	//    }
 	
-	if(!$this->UnInstallDB()) {
-	      return;
-	}
-	
-	DeleteDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/{$this->MODULE_ID}/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
-	UnRegisterModule( $this->MODULE_ID );
+		if(!$this->UnInstallDB()) {
+		      return;
+		}
+		
+		DeleteDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/{$this->MODULE_ID}/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
+		UnRegisterModule( $this->MODULE_ID );
 	}
 	
 	/**
@@ -64,7 +64,7 @@ class citfact_empty extends CModule {
 	* @return bool
 	*/
 	public function InstallEvents() {
-	return true;
+		return true;
 	}
 	
 	/**
@@ -73,7 +73,7 @@ class citfact_empty extends CModule {
 	* @return bool
 	*/
 	public function UnInstallEvents() {
-	return true;
+		return true;
 	}
 	
 	/**
@@ -82,7 +82,7 @@ class citfact_empty extends CModule {
 	* @return bool
 	*/
 	public function InstallFiles() {
-	return true;
+		return true;
 	}
 	
 	/**
@@ -91,7 +91,7 @@ class citfact_empty extends CModule {
 	* @return bool
 	*/
 	public function UnInstallFiles() {
-	return true;
+		return true;
 	}
     
 	/**
