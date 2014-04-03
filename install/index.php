@@ -94,7 +94,7 @@ class citfact_empty extends CModule {
 	return true;
 	}
     
-	/*
+	/**
 	 * Добавляем таблицы в БД
 	 *
 	 * @return bool
